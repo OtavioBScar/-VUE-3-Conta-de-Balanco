@@ -12,8 +12,8 @@ const props = defineProps({
 <template>
     <h3>Histórico</h3>
     <ul id="lista" class="lista">
-        <li v-for="transacao in transacoes" :key="transacao.id" :class="transacao.quantidade < 0 ? 'minus' : 'plus'">
-            {{ transacao.texto }} <span>{{ transacao.quantidade }}</span>
+        <li v-for="transacao in transacoes" :key="transacao.id" :class="transacao.preco < 0 ? 'minus' : 'plus'">
+            {{ transacao.texto }} <span>{{ transacao.preco }}</span>
             <button class='delete-btn'>x</button>
         </li>
     </ul>
