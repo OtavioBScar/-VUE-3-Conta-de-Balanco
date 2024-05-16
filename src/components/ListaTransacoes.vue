@@ -1,17 +1,9 @@
-<script>
-export default {
-    setup() {
-        const transacoes = [
-            { id: 1, texto: "Flores", quantidade: -23.99 },
-            { id: 2, texto: "Salario", quantidade: 1442.87 },
-            { id: 3, texto: "Caneca", quantidade: -14.55 },
-        ];
-
-        return {
-            transacoes,
-        }
-    }
-}
+<script setup>
+    const transacoes = [
+        { id: 1, texto: "Flores", quantidade: -23.99 },
+        { id: 2, texto: "Salario", quantidade: 1442.87 },
+        { id: 3, texto: "Caneca", quantidade: -14.55 },
+    ];
 </script>
 
 <template>
