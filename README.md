@@ -1,28 +1,28 @@
-# Vue Study
+# Projeto Vue para estudo
 
-This template should help get you started developing with Vue 3 in Vite.
+O mesmo foi desenvolvido em Vue 3
 
-## Recommended IDE Setup
+## Foco do código
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Fazer uma API capaz de retornar histórico de transações, realizar novas transações e exibir seu balanço com total de gastos e renda
 
-## Customize configuration
+## Desenvolvedor
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+Por [Otávio Barbosa Scarpellini](https://www.linkedin.com/in/otaviobscar/).
 
-## Project Setup
+## Fazendo o setup do projeto
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Compilar em hot-Reload para desenvolvimento
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### Compilar para produção
 
 ```sh
 npm run build
