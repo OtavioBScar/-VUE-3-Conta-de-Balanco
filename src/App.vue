@@ -56,6 +56,12 @@ const generateId = () => {
   return Math.floor(Math.random() * 1000000);
 }
 
+const handleTransacaoDeletada = (id) => {
+  transacoes.value = transacoes.value.filter((transacao) => transacao.id !== id);
+
+  toast.success("transação deletada")
+}
+
 </script>
 
 <template>
@@ -63,7 +69,7 @@ const generateId = () => {
   <div class="container">
     <Balanco :total="+total" />
     <DespesasRenda :renda="+renda" :despesa="+despesa" />
-    <ListaTransacoes :transacoes="transacoes" />
+    <ListaTransacoes :transacoes="transacoes" @transacaoDeletada="handleTransacaoDeletada" />
     <AdicionarTransacao @transacoessubmit="HandleTransactionSubmitted"/>
   </div>
 </template>
