@@ -13,13 +13,14 @@ const transacoes = ref([
   { id: 1, texto: "Flores", preco: -23.99 },
   { id: 2, texto: "Salario", preco: 1442.87 },
   { id: 3, texto: "Caneca", preco: -14.55 },
+  { id: 4, texto: "Skate", preco: 142.55 },
 ]);
 
 // Calcula o total
 const total = computed(() => {
   return transacoes.value.reduce((acumulador, transacao) => {
     return acumulador + transacao.preco;
-  }, 0);
+  }, 0).toFixed(2);
 });
 
 //Calcula Renda
