@@ -36,7 +36,7 @@
         <div class="form-control">
             <label for="quantidade">
                 Preço <br/>
-                {negativo = despesa, positivo - Renda}
+                ( valor = Renda, -valor = despesa)
             </label>
             <input type="text" id="quantidade" v-model="quantidade"  placeholder="Adicione quantidade..." />
         </div>
