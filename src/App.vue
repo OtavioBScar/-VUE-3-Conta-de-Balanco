@@ -5,6 +5,9 @@ import DespesasRenda from './components/DespesasRenda.vue'
 import ListaTransacoes from './components/ListaTransacoes.vue';
 import AdicionarTransacao from './components/AdicionarTransacao.vue';
 import { ref, computed } from 'vue'//Função para deixar a lista reativa
+import { useToast } from 'vue-toastification';
+
+const toast = useToast();
 
 const transacoes = ref([
   { id: 1, texto: "Flores", preco: -23.99 },
@@ -36,14 +39,30 @@ const despesa = computed(() => {
       return acumulador + transacao.preco;
     }, 0).toFixed(2);
 });
+
+//add transaction
+const HandleTransactionSubmitted = (dadosTransacao) => {
+  transacoes.value.push({
+    id: generateId(),
+    texto: dadosTransacao.text,
+    preco: dadosTransacao.quantidade
+  })
+  
+  toast.success("transação adicionada")
+}
+
+const generateId = () => {
+  return Math.floor(Math.random() * 1000000);
+}
+
 </script>
 
 <template>
   <Cabecalho />
   <div class="container">
-    <Balanco :total="total" />
-    <DespesasRenda :renda="renda" :despesa="despesa" />
+    <Balanco :total="+total" />
+    <DespesasRenda :renda="+renda" :despesa="+despesa" />
     <ListaTransacoes :transacoes="transacoes" />
-    <AdicionarTransacao />
+    <AdicionarTransacao @transacoessubmit="HandleTransactionSubmitted"/>
   </div>
 </template>
