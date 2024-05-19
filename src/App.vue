@@ -4,17 +4,20 @@ import Cabecalho from './components/Cabecalho.vue';
 import DespesasRenda from './components/DespesasRenda.vue'
 import ListaTransacoes from './components/ListaTransacoes.vue';
 import AdicionarTransacao from './components/AdicionarTransacao.vue';
-import { ref, computed } from 'vue'//Função para deixar a lista reativa
+import { ref, computed, onMounted } from 'vue'//Função para deixar a lista reativa
 import { useToast } from 'vue-toastification';
 
 const toast = useToast();
 
-const transacoes = ref([
-  { id: 1, texto: "Flores", preco: -23.99 },
-  { id: 2, texto: "Salario", preco: 1442.87 },
-  { id: 3, texto: "Caneca", preco: -14.55 },
-  { id: 4, texto: "Skate", preco: 142.55 },
-]);
+const transacoes = ref([]);
+
+onMounted(() => {
+  const transacoesSalvas = JSON.parse(localStorage.getItem('transacoes'));
+
+  if (transacoesSalvas){
+    transacoes.value = transacoesSalvas;
+  }
+});
 
 // Calcula o total
 const total = computed(() => {
@@ -48,6 +51,8 @@ const HandleTransactionSubmitted = (dadosTransacao) => {
     texto: dadosTransacao.text,
     preco: dadosTransacao.quantidade
   })
+
+  salvarTransacoesnoLocalStorage();
   
   toast.success("transação adicionada")
 }
@@ -59,9 +64,15 @@ const generateId = () => {
 const handleTransacaoDeletada = (id) => {
   transacoes.value = transacoes.value.filter((transacao) => transacao.id !== id);
 
+  salvarTransacoesnoLocalStorage();
+
   toast.success("transação deletada")
 }
 
+// Salvar no localStorage
+const salvarTransacoesnoLocalStorage = () => {
+  localStorage.setItem('transacoes', JSON.stringify(transacoes.value))
+}
 </script>
 
 <template>
