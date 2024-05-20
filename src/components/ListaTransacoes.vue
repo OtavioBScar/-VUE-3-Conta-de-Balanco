@@ -16,9 +16,9 @@ const deleteTransaction = (id) => {
 </script>
 
 <template>
-    <h3>Histórico</h3>
+    <h3 class="title">Histórico</h3>
     <ul id="lista" class="lista">
-        <li v-for="transacao in transacoes" :key="transacao.id" :class="transacao.preco < 0 ? 'minus' : 'plus'">
+        <li class="title" v-for="transacao in transacoes" :key="transacao.id" :class="transacao.preco < 0 ? 'minus' : 'plus'">
             {{ transacao.texto }} <span>{{ transacao.preco }}</span>
             <button class='delete-btn' @click="deleteTransaction(transacao.id)">x</button>
         </li>

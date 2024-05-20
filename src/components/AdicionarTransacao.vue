@@ -27,14 +27,14 @@
 </script>
 
 <template>
-    <h3>Adicionar nova transação</h3>
+    <h3 class="title">Adicionar nova transação</h3>
     <form id="form" @submit.prevent="onSubmit">
         <div class="form-control">
-            <label for="text">Texto</label>
+            <label class="title" for="text">Texto</label>
             <input type="text" id="text" v-model="text" placeholder="Adicione texto..." />
         </div>
         <div class="form-control">
-            <label for="quantidade">
+            <label class="title" for="quantidade">
                 Preço <br/>
                 ( valor = Renda, -valor = despesa)
             </label>

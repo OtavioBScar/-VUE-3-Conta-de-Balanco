@@ -1,12 +1,29 @@
+<script setup>
+import { ref } from 'vue';
+import { useDark, useToggle } from '@vueuse/core';
+
+const isDark = useDark({
+  selector: "body",
+  attribute: "color-scheme",
+  valueDark: "dark",
+  valueLight: "light",
+});
+const toggle = useToggle(isDark)
+
+const onSubmit = () => {
+  toggle()
+}
+</script>
+
 <template>
-    <label class="switch-container">
-        <input type="checkbox">
-        <span class="slider"></span>
-    </label>
+  <label class="switch-container">
+    <input type="checkbox" @click="onSubmit">
+    <span class="slider"></span>
+  </label>
 </template>
 
 <style scoped>
-    /* The switch - the box around the slider */
+/* The switch - the box around the slider */
 .switch-container {
   position: relative;
   display: inline-block;
@@ -48,13 +65,12 @@
   transition: transform 0.5s, box-shadow 0.5s;
 }
 
-.switch-container input:checked + .slider {
+.switch-container input:checked+.slider {
   background-color: #000;
 }
 
-.switch-container input:checked + .slider:before {
+.switch-container input:checked+.slider:before {
   transform: translateX(100%);
   box-shadow: inset 8px -4px 0px 0px #f8f8f4;
 }
-
 </style>

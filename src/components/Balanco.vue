@@ -10,6 +10,6 @@
 </script>
 
 <template>
-    <h4>Seu Balanço</h4>
-    <h1 id="balanco">R${{ total }}</h1>
+    <h4 class="title">Seu Balanço</h4>
+    <h1 class="title" id="balanco">R${{ total }}</h1>
 </template>

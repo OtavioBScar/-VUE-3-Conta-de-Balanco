@@ -14,7 +14,7 @@ const transacoes = ref([]);
 onMounted(() => {
   const transacoesSalvas = JSON.parse(localStorage.getItem('transacoes'));
 
-  if (transacoesSalvas){
+  if (transacoesSalvas) {
     transacoes.value = transacoesSalvas;
   }
 });
@@ -53,7 +53,7 @@ const HandleTransactionSubmitted = (dadosTransacao) => {
   })
 
   salvarTransacoesnoLocalStorage();
-  
+
   toast.success("transação adicionada")
 }
 
@@ -76,11 +76,13 @@ const salvarTransacoesnoLocalStorage = () => {
 </script>
 
 <template>
-  <Cabecalho />
   <div class="container">
-    <Balanco :total="+total" />
-    <DespesasRenda :renda="+renda" :despesa="+despesa" />
-    <ListaTransacoes :transacoes="transacoes" @transacaoDeletada="handleTransacaoDeletada" />
-    <AdicionarTransacao @transacoessubmit="HandleTransactionSubmitted"/>
+    <div class="minicont">
+      <Cabecalho />
+      <Balanco :total="+total" />
+      <DespesasRenda :renda="+renda" :despesa="+despesa" />
+      <ListaTransacoes :transacoes="transacoes" @transacaoDeletada="handleTransacaoDeletada" />
+      <AdicionarTransacao @transacoessubmit="HandleTransactionSubmitted" />
+    </div>
   </div>
 </template>

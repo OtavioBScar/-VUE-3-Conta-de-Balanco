@@ -8,21 +8,60 @@
   box-sizing: border-box;
 }
 
+[color-scheme= 'light'] {
+  background-color: #f3f3f3;
+
+  .title {
+    color: #333;
+  }
+}
+
+[color-scheme= 'dark'] {
+  background-color: #333;
+ 
+  input {
+    background-color: #333;
+    color: #f3f3f3;
+  }
+
+  .title {
+    color: #f3f3f3;
+  }
+
+  .des-ren-container {
+    background-color: #575151;
+  }
+
+  .dinheiro.minus {
+    color: #f05b4a;
+  }
+
+  .lista li {
+    background-color: #575151;
+  }
+}
+
 body {
-  background-color: #f7f7f7;
+  background-color: #f3f3f3;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 100%;
   margin: 0;
   font-family: 'Lato', sans-serif;
   font-size: 18px;
 }
 
 .container {
-  margin: 30px auto;
-  width: 400px;
+  width: 98.7vw;
+}
+
+.minicont {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width:60%;
 }
 
 h1 {

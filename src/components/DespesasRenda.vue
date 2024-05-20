@@ -15,11 +15,11 @@
 
 <template>
     <div class="des-ren-container">
-        <div>
+        <div class="title">
             <h4>Renda</h4>
             <p id="dinheiro-plus" class="dinheiro plus">R${{ renda }}</p>
         </div>
-        <div>
+        <div class="title">
             <h4>Despesa</h4>
             <p id="dinheiro-minus" class="dinheiro minus">R${{ despesa }}</p>
         </div>
