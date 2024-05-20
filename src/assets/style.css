@@ -54,14 +54,14 @@ body {
 }
 
 .container {
-  width: 98.7vw;
+  width: 100%;
 }
 
 .minicont {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width:60%;
+  width:100%;
 }
 
 h1 {

@@ -82,7 +82,7 @@ const salvarTransacoesnoLocalStorage = () => {
       <Balanco :total="+total" />
       <DespesasRenda :renda="+renda" :despesa="+despesa" />
       <ListaTransacoes :transacoes="transacoes" @transacaoDeletada="handleTransacaoDeletada" />
-      <AdicionarTransacao @transacoessubmit="HandleTransactionSubmitted" />
+      <AdicionarTransacao @transacoessubmit="HandleTransactionSubmitted" @maismenos="HandleMaisMenos" />
     </div>
   </div>
 </template>
