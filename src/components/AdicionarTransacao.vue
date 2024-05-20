@@ -74,7 +74,6 @@ input[type=checkbox] {
     appearance: none;
     height: 2rem;
     width: 3.5rem;
-    background-color: #575151;
     position: relative;
     border-radius: .2em;
     cursor: pointer;
