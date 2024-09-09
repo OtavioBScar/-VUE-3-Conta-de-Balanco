@@ -38,7 +38,7 @@ Adicionando uma despesa (Símbolo vermelho)
 ```sh
 Resultado visual
 ```
-![Transação Inserida](/public/addedTransaction.png)
+![Transação Inserida](/public/addedTransaction1.png)
 
 ```sh
 Adicionando uma renda (Símbolo verde)
