@@ -4,11 +4,7 @@ O mesmo foi desenvolvido em Vue 3
 
 ## Foco do código
 
-Fazer uma API capaz de retornar histórico de transações, realizar novas transações e exibir seu balanço com total de gastos e renda
-
-## Desenvolvedor
-
-Por [Otávio Barbosa Scarpellini](https://www.linkedin.com/in/otaviobscar/).
+Fazer uma Interface capaz de retornar histórico de transações, realizar novas transações e exibir seu balanço com total de gastos e renda
 
 ## Fazendo o setup do projeto
 
@@ -27,3 +23,29 @@ npm run dev
 ```sh
 npm run build
 ```
+
+# Demonstração de uso
+```sh
+Tela inicial da aplicação
+```
+![Tela Inicial](/public/telaInicial.png)
+
+```sh
+Adicionando uma despesa (Símbolo vermelho)
+```
+![Nova Transação](/public/novaTransacao.png)
+
+```sh
+Resultado visual
+```
+![Transação Inserida](/public/addedTransaction.png)
+
+```sh
+Adicionando uma renda (Símbolo verde)
+```
+![Nova Renda](/public/novaTransacao2.png)
+
+```sh
+Resultado visual
+```
+![Transação Inserida](/public/overAllBalance.png)
